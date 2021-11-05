@@ -6,6 +6,8 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import java.util.List;
 
 public interface ActiviteDao  extends JpaRepository<Activite, Long> {
-    List<Activite> findByClubsLibelle(String libelle);
+    Activite findByNomActivite(String nomActivite);
+    Activite findActiviteById(Long id);
+    int deleteActiviteById(Long id);
 
 }

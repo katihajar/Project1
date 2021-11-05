@@ -15,8 +15,6 @@ public class Activite  implements Serializable {
     private Date dateDebut ;
     @Temporal(TemporalType.DATE)
     private Date dateFin ;
-    @ManyToOne
-    private Clubs clubs;
 
     public Long getId() {
         return id;
@@ -66,11 +64,4 @@ public class Activite  implements Serializable {
         this.dateFin = dateFin;
     }
 
-    public Clubs getClubs() {
-        return clubs;
-    }
-
-    public void setClubs(Clubs clubs) {
-        this.clubs = clubs;
-    }
 }

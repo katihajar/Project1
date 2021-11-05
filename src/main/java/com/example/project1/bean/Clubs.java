@@ -18,12 +18,9 @@ public class Clubs implements Serializable {
     private String categorie;
     @Temporal(TemporalType.DATE)
     private Date dateCreation ;
-    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     @OneToMany(mappedBy = "clubs")
     private List<Member> members ;
-    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
-    @OneToMany(mappedBy = "clubs")
-    private List<Activite> activites ;
+
     @ManyToOne
     private JuryDVE jury;
     @ManyToOne
@@ -33,13 +30,6 @@ public class Clubs implements Serializable {
         return admin;
     }
 
-    public List<Activite> getActivites() {
-        return activites;
-    }
-
-    public void setActivites(List<Activite> activites) {
-        this.activites = activites;
-    }
 
     public void setAdmin(SuperAdminDVE admin) {
         this.admin = admin;

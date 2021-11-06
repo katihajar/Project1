@@ -18,8 +18,6 @@ public class Clubs implements Serializable {
     private String categorie;
     @Temporal(TemporalType.DATE)
     private Date dateCreation ;
-    @OneToMany(mappedBy = "clubs")
-    private List<Member> members ;
 
     @ManyToOne
     private JuryDVE jury;
@@ -81,14 +79,6 @@ public class Clubs implements Serializable {
 
     public void setDateCreation(Date dateCreation) {
         this.dateCreation = dateCreation;
-    }
-
-    public List<Member> getMembers() {
-        return members;
-    }
-
-    public void setMembers(List<Member> members) {
-        this.members = members;
     }
 
     public JuryDVE getJury() {

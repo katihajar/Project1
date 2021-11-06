@@ -1,9 +1,7 @@
 package com.example.project1.service;
 
-import com.example.project1.bean.Activite;
-import com.example.project1.bean.Etudiant;
+import com.example.project1.bean.*;
 import com.example.project1.dao.ActiviteDao;
-import com.example.project1.dao.EtudiantDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -14,6 +12,8 @@ import java.util.List;
 public class ActiviteService {
     @Autowired
     private ActiviteDao activiteDao;
+    @Autowired
+    private ClubsService clubsService;
 
     public Activite findByNomActivite(String nomActivite) {
         return activiteDao.findByNomActivite(nomActivite);
@@ -39,11 +39,31 @@ public class ActiviteService {
     }
 
     public int save(Activite activite) {
+        Clubs club= clubsService.findClubsById(activite.getClubs().getId());
         if (findActiviteById(activite.getId())!= null){
             return -1;
         }else{
+            activite.setClubs(club);
             activiteDao.save(activite);
             return 1;
         }
+    }
+
+    public List<Activite> findByClubsLibelle(String libelle) {
+        return activiteDao.findByClubsLibelle(libelle);
+    }
+
+    public List<Activite> findByClubsCategorie(String categorie) {
+        return activiteDao.findByClubsCategorie(categorie);
+    }
+
+    public Activite update(Activite activite) {
+        Clubs clubs= clubsService.findClubsById(activite.getClubs().getId());
+        activite.setClubs(clubs);
+        activite.setNomActivite(activite.getNomActivite());
+        activite.setDescription(activite.getDescription());
+        activite.setBudget(activite.getBudget());
+        activite.setImage(activite.getImage());
+        return activiteDao.save(activite);
     }
 }

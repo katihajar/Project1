@@ -15,8 +15,6 @@ public class Member  implements Serializable {
     private String fillier;
     private String login;
     private String password;
-    @ManyToOne
-    private Clubs clubs;
 
     public Long getId() {
         return id;
@@ -82,11 +80,4 @@ public class Member  implements Serializable {
         this.password = password;
     }
 
-    public Clubs getClubs() {
-        return clubs;
-    }
-
-    public void setClubs(Clubs clubs) {
-        this.clubs = clubs;
-    }
 }

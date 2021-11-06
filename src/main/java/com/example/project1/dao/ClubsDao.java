@@ -1,8 +1,6 @@
 package com.example.project1.dao;
 
-import com.example.project1.bean.Activite;
 import com.example.project1.bean.Clubs;
-import com.example.project1.bean.ComiteExecutive;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

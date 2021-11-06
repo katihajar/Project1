@@ -1,5 +1,6 @@
 package com.example.project1.service;
 
+import com.example.project1.bean.Clubs;
 import com.example.project1.bean.Etudiant;
 import com.example.project1.dao.EtudiantDao;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -51,7 +52,5 @@ public class EtudiantService {
             return 1;
         }
     }
-
-
 
 }

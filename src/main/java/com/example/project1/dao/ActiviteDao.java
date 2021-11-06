@@ -7,6 +7,8 @@ import java.util.List;
 
 public interface ActiviteDao  extends JpaRepository<Activite, Long> {
     Activite findByNomActivite(String nomActivite);
+    List<Activite> findByClubsLibelle(String libelle);
+    List<Activite> findByClubsCategorie(String categorie);
     Activite findActiviteById(Long id);
     int deleteActiviteById(Long id);
 

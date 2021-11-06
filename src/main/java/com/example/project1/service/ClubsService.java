@@ -49,4 +49,11 @@ public class ClubsService {
             return 1;
         }
     }
+    public Clubs update(Clubs clubs) {
+        clubs.setStatus(clubs.getStatus());
+        clubs.setCategorie(clubs.getStatus());
+        clubs.setLibelle(clubs.getLibelle());
+        clubs.setReferentPedagogique(clubs.getReferentPedagogique());
+        return clubsDao.save(clubs);
+    }
 }

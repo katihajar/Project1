@@ -6,7 +6,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import java.util.List;
 
 public interface MemberDao extends JpaRepository<Member, Long> {
-    List<Member> findByClubsId(Long id);
     Member findBynumeroEtudiant(String numeroEtudiant);
+    Member findMemberById(Long id);
     int deleteMemberById(Long id);
 }

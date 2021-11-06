@@ -2,6 +2,7 @@ package com.example.project1.bean;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.math.BigDecimal;
 import java.util.Date;
 @Entity
 public class Activite  implements Serializable {
@@ -11,10 +12,21 @@ public class Activite  implements Serializable {
     private String nomActivite;
     private String description;
     private String image;
+    private BigDecimal budget;
     @Temporal(TemporalType.DATE)
     private Date dateDebut ;
     @Temporal(TemporalType.DATE)
     private Date dateFin ;
+    @ManyToOne
+    private Clubs clubs;
+
+    public BigDecimal getBudget() {
+        return budget;
+    }
+
+    public void setBudget(BigDecimal budget) {
+        this.budget = budget;
+    }
 
     public Long getId() {
         return id;
@@ -64,4 +76,11 @@ public class Activite  implements Serializable {
         this.dateFin = dateFin;
     }
 
+    public Clubs getClubs() {
+        return clubs;
+    }
+
+    public void setClubs(Clubs clubs) {
+        this.clubs = clubs;
+    }
 }

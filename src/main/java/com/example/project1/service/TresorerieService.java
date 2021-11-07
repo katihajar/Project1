@@ -1,7 +1,6 @@
 package com.example.project1.service;
 
 import com.example.project1.bean.Activite;
-import com.example.project1.bean.SuperAdminDVE;
 import com.example.project1.bean.Tresorerie;
 import com.example.project1.dao.TresorerieDao;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -57,7 +56,7 @@ public class TresorerieService {
     public Tresorerie update(Tresorerie tresorerie) {
         Activite activite = activiteService.findActiviteById(tresorerie.getActivite().getId());
         tresorerie.setActivite(activite);
-        tresorerie.setIn(tresorerie.getIn());
+        tresorerie.setInn(tresorerie.getInn());
         return tresorerieDao.save(tresorerie);
     }
 }

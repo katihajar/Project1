@@ -8,9 +8,9 @@ public class Tresorerie  implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    private Boolean in;
+    private Boolean inn;
     @Temporal(TemporalType.DATE)
-    private Date date ;
+    private Date dateTresorerie ;
     @OneToOne
     private Activite activite;
 
@@ -22,12 +22,12 @@ public class Tresorerie  implements Serializable {
         this.id = id;
     }
 
-    public Boolean getIn() {
-        return in;
+    public Boolean getInn() {
+        return inn;
     }
 
-    public void setIn(Boolean in) {
-        this.in = in;
+    public void setInn(Boolean inn) {
+        this.inn = inn;
     }
 
     public Activite getActivite() {
@@ -38,12 +38,11 @@ public class Tresorerie  implements Serializable {
         this.activite = activite;
     }
 
-    public Date getDate() {
-        return date;
+    public Date getDateTresorerie() {
+        return dateTresorerie;
     }
 
-    public void setDate(Date date) {
-        this.date = date;
+    public void setDateTresorerie(Date dateTresorerie) {
+        this.dateTresorerie = dateTresorerie;
     }
-
 }

@@ -1,9 +1,9 @@
-package com.example.project1.rest.comite;
+package com.example.project1.rest.admin;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/comite/activite")
-public class ActiviteComiteRest {
+@RequestMapping("/admin/clubsmembers")
+public class ClubsMembersAdminRest {
 }

@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-11-11T18:48:08.307Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36 Edg/95.0.1020.44" etag="RaY8Nmwo_8lh6yV4sulu" version="15.7.3" type="github">
+<mxfile host="app.diagrams.net" modified="2021-11-11T18:54:31.227Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36 Edg/95.0.1020.44" etag="yO8kU8wLAUYXQYi7X4So" version="15.7.3" type="github">
   <diagram name="Page-1" id="c9db0220-8083-56f3-ca83-edcdcd058819">
     <mxGraphModel dx="820" dy="482" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1.5" pageWidth="826" pageHeight="1169" background="#FFFFFF" math="0" shadow="0">
       <root>
@@ -24,7 +24,7 @@
         </mxCell>
         <mxCell id="j6AXFMzYux9oAnsxbU0D-7" value="Download" style="perimeter=none;dashed=0;shape=mxgraph.gmdl.download;verticalAlign=middle;align=left;labelPosition=right;fontSize=15;spacing=16;resizeWidth=1;strokeColor=none;fillColor=#747474;" vertex="1" parent="j6AXFMzYux9oAnsxbU0D-1">
           <mxGeometry width="13.333333333333334" height="16" relative="1" as="geometry">
-            <mxPoint x="17" y="270" as="offset" />
+            <mxPoint x="17" y="250" as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="j6AXFMzYux9oAnsxbU0D-8" value="" style="shape=line;resizeWidth=1;perimeter=none;strokeColor=#eeeeee;" vertex="1" parent="j6AXFMzYux9oAnsxbU0D-1">
@@ -85,7 +85,7 @@
         <mxCell id="j6AXFMzYux9oAnsxbU0D-34" value="" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn4.iconfinder.com/data/icons/6x16-free-application-icons/16/OK.png;fontSize=15;fontColor=#00FF00;" vertex="1" parent="1">
           <mxGeometry x="520" y="524" width="36" height="36" as="geometry" />
         </mxCell>
-        <mxCell id="j6AXFMzYux9oAnsxbU0D-35" value="&lt;b&gt;&lt;font color=&quot;#0000ff&quot;&gt;Les demandes d&#39;adition au club&lt;/font&gt;&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=15;fontColor=#000000;" vertex="1" parent="1">
+        <mxCell id="j6AXFMzYux9oAnsxbU0D-35" value="&lt;b&gt;&lt;font color=&quot;#0000ff&quot;&gt;Requests&lt;/font&gt;&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=15;fontColor=#000000;" vertex="1" parent="1">
           <mxGeometry x="270" y="450" width="250" height="30" as="geometry" />
         </mxCell>
         <mxCell id="j6AXFMzYux9oAnsxbU0D-36" value="" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn3.iconfinder.com/data/icons/musthave/128/Cancel.png;fontSize=15;fontColor=#0000FF;" vertex="1" parent="1">
@@ -342,6 +342,12 @@
         </mxCell>
         <mxCell id="j6AXFMzYux9oAnsxbU0D-153" value="" style="html=1;verticalLabelPosition=bottom;align=center;labelBackgroundColor=#ffffff;verticalAlign=top;strokeWidth=2;strokeColor=#0080F0;shadow=0;dashed=0;shape=mxgraph.ios7.icons.delete;fontSize=24;fontColor=#0000CC;" vertex="1" parent="1">
           <mxGeometry x="700" y="1700" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="j6AXFMzYux9oAnsxbU0D-165" value="" style="image;html=1;image=img/lib/clip_art/general/Star_128x128.png;fontSize=16;fontColor=#000000;strokeWidth=16;" vertex="1" parent="1">
+          <mxGeometry x="621" y="233.5" width="60" height="46.5" as="geometry" />
+        </mxCell>
+        <mxCell id="j6AXFMzYux9oAnsxbU0D-166" value="" style="image;html=1;image=img/lib/clip_art/general/Star_128x128.png;fontSize=16;fontColor=#000000;strokeWidth=16;" vertex="1" parent="1">
+          <mxGeometry x="690" y="233.5" width="60" height="43.25" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>

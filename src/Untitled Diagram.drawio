@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-11-11T17:58:27.639Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36 Edg/95.0.1020.44" etag="ocN4HIS-yNyLP5uo7XF5" version="15.7.3" type="github">
+<mxfile host="app.diagrams.net" modified="2021-11-11T18:00:58.132Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36 Edg/95.0.1020.44" etag="yevOmy-5Nquf4OjY9MRw" version="15.7.3" type="github">
   <diagram name="Page-1" id="c9db0220-8083-56f3-ca83-edcdcd058819">
     <mxGraphModel dx="820" dy="482" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1.5" pageWidth="826" pageHeight="1169" background="#ffffff" math="0" shadow="0">
       <root>
@@ -306,6 +306,30 @@
         </mxCell>
         <mxCell id="j6AXFMzYux9oAnsxbU0D-126" value="delete a member" style="text;whiteSpace=wrap;html=1;fontSize=24;fontColor=#0000CC;fontStyle=1" vertex="1" parent="1">
           <mxGeometry x="280" y="1490" width="220" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="j6AXFMzYux9oAnsxbU0D-140" value="Last Name and first name" style="fillColor=none;strokeColor=none;html=1;fontSize=11;fontStyle=0;align=left;fontColor=#596780;fontStyle=1;fontSize=11" vertex="1" parent="1">
+          <mxGeometry x="160" y="1560" width="240" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="j6AXFMzYux9oAnsxbU0D-141" value="status" style="fillColor=none;strokeColor=none;html=1;fontSize=11;fontStyle=0;align=left;fontColor=#596780;fontStyle=1;fontSize=11" vertex="1" parent="1">
+          <mxGeometry x="440" y="1570" width="240" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="j6AXFMzYux9oAnsxbU0D-142" value="..." style="rounded=1;arcSize=9;fillColor=#F7F8F9;align=left;spacingLeft=5;strokeColor=#DEE1E6;html=1;strokeWidth=2;fontSize=12;fontColor=#0000CC;" vertex="1" parent="1">
+          <mxGeometry x="160" y="1600" width="200" height="33" as="geometry" />
+        </mxCell>
+        <mxCell id="j6AXFMzYux9oAnsxbU0D-143" value="..." style="rounded=1;arcSize=9;fillColor=#F7F8F9;align=left;spacingLeft=5;strokeColor=#DEE1E6;html=1;strokeWidth=2;fontSize=12;fontColor=#0000CC;" vertex="1" parent="1">
+          <mxGeometry x="160" y="1650" width="200" height="33" as="geometry" />
+        </mxCell>
+        <mxCell id="j6AXFMzYux9oAnsxbU0D-144" value="..." style="rounded=1;arcSize=9;fillColor=#F7F8F9;align=left;spacingLeft=5;strokeColor=#DEE1E6;html=1;strokeWidth=2;fontSize=12;fontColor=#0000CC;" vertex="1" parent="1">
+          <mxGeometry x="160" y="1700" width="200" height="33" as="geometry" />
+        </mxCell>
+        <mxCell id="j6AXFMzYux9oAnsxbU0D-145" value="Vice President" style="rounded=1;arcSize=9;fillColor=#F7F8F9;align=left;spacingLeft=5;strokeColor=#DEE1E6;html=1;strokeWidth=2;fontSize=12;fontColor=#0000CC;" vertex="1" parent="1">
+          <mxGeometry x="440" y="1600" width="240" height="33" as="geometry" />
+        </mxCell>
+        <mxCell id="j6AXFMzYux9oAnsxbU0D-147" value="treasury" style="rounded=1;arcSize=9;fillColor=#F7F8F9;align=left;spacingLeft=5;strokeColor=#DEE1E6;html=1;strokeWidth=2;fontSize=12;fontColor=#0000CC;" vertex="1" parent="1">
+          <mxGeometry x="440" y="1650" width="240" height="33" as="geometry" />
+        </mxCell>
+        <mxCell id="j6AXFMzYux9oAnsxbU0D-148" value="member" style="rounded=1;arcSize=9;fillColor=#F7F8F9;align=left;spacingLeft=5;strokeColor=#DEE1E6;html=1;strokeWidth=2;fontSize=12;fontColor=#0000CC;" vertex="1" parent="1">
+          <mxGeometry x="441" y="1700" width="240" height="33" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>

@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-11-11T15:31:48.562Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36 Edg/95.0.1020.44" etag="oKSaRWlNfFamwU7XX_5k" version="15.7.3" type="github">
+<mxfile host="app.diagrams.net" modified="2021-11-11T15:34:21.581Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36 Edg/95.0.1020.44" etag="6QVwhaoEaL1Kf_On2Nvi" version="15.7.3" type="github">
   <diagram name="Page-1" id="c9db0220-8083-56f3-ca83-edcdcd058819">
     <mxGraphModel dx="820" dy="482" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1.5" pageWidth="826" pageHeight="1169" background="#ffffff" math="0" shadow="0">
       <root>
@@ -57,19 +57,19 @@
         <mxCell id="j6AXFMzYux9oAnsxbU0D-22" value="Name&lt;sup&gt;&lt;font color=&quot;#ff0000&quot;&gt;*&lt;/font&gt;&lt;/sup&gt;" style="fillColor=none;strokeColor=none;html=1;fontSize=11;fontStyle=0;align=left;fontColor=#596780;fontStyle=1;fontSize=11" vertex="1" parent="1">
           <mxGeometry x="280" y="60" width="240" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="j6AXFMzYux9oAnsxbU0D-23" value="Messina Cake" style="rounded=1;arcSize=9;align=left;spacingLeft=5;strokeColor=#4C9AFF;html=1;strokeWidth=2;fontSize=12" vertex="1" parent="1">
+        <mxCell id="j6AXFMzYux9oAnsxbU0D-23" value="" style="rounded=1;arcSize=9;align=left;spacingLeft=5;strokeColor=#4C9AFF;html=1;strokeWidth=2;fontSize=12" vertex="1" parent="1">
           <mxGeometry x="280" y="90" width="280" height="33" as="geometry" />
         </mxCell>
         <mxCell id="j6AXFMzYux9oAnsxbU0D-26" value="Prenom&lt;span style=&quot;color: rgb(255 , 0 , 0) ; font-size: 9.16667px&quot;&gt;*&lt;/span&gt;" style="fillColor=none;strokeColor=none;html=1;fontSize=11;fontStyle=0;align=left;fontColor=#596780;fontStyle=1;fontSize=11" vertex="1" parent="1">
           <mxGeometry x="280" y="140" width="240" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="j6AXFMzYux9oAnsxbU0D-27" value="Messina Cake" style="rounded=1;arcSize=9;align=left;spacingLeft=5;strokeColor=#4C9AFF;html=1;strokeWidth=2;fontSize=12" vertex="1" parent="1">
+        <mxCell id="j6AXFMzYux9oAnsxbU0D-27" value="" style="rounded=1;arcSize=9;align=left;spacingLeft=5;strokeColor=#4C9AFF;html=1;strokeWidth=2;fontSize=12" vertex="1" parent="1">
           <mxGeometry x="280" y="170" width="280" height="33" as="geometry" />
         </mxCell>
         <mxCell id="j6AXFMzYux9oAnsxbU0D-28" value="Email&lt;span style=&quot;color: rgb(255 , 0 , 0) ; font-size: 9.16667px&quot;&gt;*&lt;/span&gt;" style="fillColor=none;strokeColor=none;html=1;fontSize=11;fontStyle=0;align=left;fontColor=#596780;fontStyle=1;fontSize=11" vertex="1" parent="1">
           <mxGeometry x="280" y="220.78" width="240" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="j6AXFMzYux9oAnsxbU0D-29" value="Messina Cake" style="rounded=1;arcSize=9;align=left;spacingLeft=5;strokeColor=#4C9AFF;html=1;strokeWidth=2;fontSize=12" vertex="1" parent="1">
+        <mxCell id="j6AXFMzYux9oAnsxbU0D-29" value="" style="rounded=1;arcSize=9;align=left;spacingLeft=5;strokeColor=#4C9AFF;html=1;strokeWidth=2;fontSize=12" vertex="1" parent="1">
           <mxGeometry x="280" y="247" width="280" height="33" as="geometry" />
         </mxCell>
         <mxCell id="j6AXFMzYux9oAnsxbU0D-31" value="feliere&lt;span style=&quot;color: rgb(255 , 0 , 0) ; font-size: 9.16667px&quot;&gt;*&lt;/span&gt;" style="fillColor=none;strokeColor=none;html=1;fontSize=11;fontStyle=0;align=left;fontColor=#596780;fontStyle=1;fontSize=11" vertex="1" parent="1">

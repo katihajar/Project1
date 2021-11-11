@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-11-11T15:51:32.479Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36 Edg/95.0.1020.44" etag="9LWIZDxqPgYmo9GcZQs0" version="15.7.3" type="github">
+<mxfile host="app.diagrams.net" modified="2021-11-11T17:53:50.928Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36 Edg/95.0.1020.44" etag="4BHF-CfIHLWFw5d0dCQ1" version="15.7.3" type="github">
   <diagram name="Page-1" id="c9db0220-8083-56f3-ca83-edcdcd058819">
     <mxGraphModel dx="820" dy="482" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1.5" pageWidth="826" pageHeight="1169" background="#ffffff" math="0" shadow="0">
       <root>
@@ -261,6 +261,39 @@
         </mxCell>
         <mxCell id="j6AXFMzYux9oAnsxbU0D-104" value="La liste des membres" style="text;strokeColor=none;fillColor=none;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=center;fontColor=#0000CC;" vertex="1" parent="1">
           <mxGeometry x="280" y="1160" width="240" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="j6AXFMzYux9oAnsxbU0D-108" value="Project name" style="fillColor=none;strokeColor=none;html=1;fontSize=11;fontStyle=0;align=left;fontColor=#596780;fontStyle=1;fontSize=11" vertex="1" parent="1">
+          <mxGeometry x="210" y="1110" width="240" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="j6AXFMzYux9oAnsxbU0D-111" value="Last Name and first name" style="fillColor=none;strokeColor=none;html=1;fontSize=11;fontStyle=0;align=left;fontColor=#596780;fontStyle=1;fontSize=11" vertex="1" parent="1">
+          <mxGeometry x="160" y="1240" width="240" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="j6AXFMzYux9oAnsxbU0D-112" value="..." style="rounded=1;arcSize=9;fillColor=#F7F8F9;align=left;spacingLeft=5;strokeColor=#DEE1E6;html=1;strokeWidth=2;fontSize=12;fontColor=#0000CC;" vertex="1" parent="1">
+          <mxGeometry x="160" y="1280" width="200" height="33" as="geometry" />
+        </mxCell>
+        <mxCell id="j6AXFMzYux9oAnsxbU0D-113" value="status" style="fillColor=none;strokeColor=none;html=1;fontSize=11;fontStyle=0;align=left;fontColor=#596780;fontStyle=1;fontSize=11" vertex="1" parent="1">
+          <mxGeometry x="440" y="1240" width="240" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="j6AXFMzYux9oAnsxbU0D-114" value="Vice President" style="rounded=1;arcSize=9;fillColor=#F7F8F9;align=left;spacingLeft=5;strokeColor=#DEE1E6;html=1;strokeWidth=2;fontSize=12;fontColor=#0000CC;" vertex="1" parent="1">
+          <mxGeometry x="440" y="1280" width="240" height="33" as="geometry" />
+        </mxCell>
+        <mxCell id="j6AXFMzYux9oAnsxbU0D-115" value="..." style="rounded=1;arcSize=9;fillColor=#F7F8F9;align=left;spacingLeft=5;strokeColor=#DEE1E6;html=1;strokeWidth=2;fontSize=12;fontColor=#0000CC;" vertex="1" parent="1">
+          <mxGeometry x="160" y="1330" width="200" height="33" as="geometry" />
+        </mxCell>
+        <mxCell id="j6AXFMzYux9oAnsxbU0D-116" value="treasury" style="rounded=1;arcSize=9;fillColor=#F7F8F9;align=left;spacingLeft=5;strokeColor=#DEE1E6;html=1;strokeWidth=2;fontSize=12;fontColor=#0000CC;" vertex="1" parent="1">
+          <mxGeometry x="440" y="1330" width="240" height="33" as="geometry" />
+        </mxCell>
+        <mxCell id="j6AXFMzYux9oAnsxbU0D-117" value="..." style="rounded=1;arcSize=9;fillColor=#F7F8F9;align=left;spacingLeft=5;strokeColor=#DEE1E6;html=1;strokeWidth=2;fontSize=12;fontColor=#0000CC;" vertex="1" parent="1">
+          <mxGeometry x="160" y="1370" width="200" height="33" as="geometry" />
+        </mxCell>
+        <mxCell id="j6AXFMzYux9oAnsxbU0D-118" value="Secretary General" style="rounded=1;arcSize=9;fillColor=#F7F8F9;align=left;spacingLeft=5;strokeColor=#DEE1E6;html=1;strokeWidth=2;fontSize=12;fontColor=#0000CC;" vertex="1" parent="1">
+          <mxGeometry x="442" y="1370" width="238" height="33" as="geometry" />
+        </mxCell>
+        <mxCell id="j6AXFMzYux9oAnsxbU0D-119" value="..." style="rounded=1;arcSize=9;fillColor=#F7F8F9;align=left;spacingLeft=5;strokeColor=#DEE1E6;html=1;strokeWidth=2;fontSize=12;fontColor=#0000CC;" vertex="1" parent="1">
+          <mxGeometry x="160" y="1410" width="200" height="33" as="geometry" />
+        </mxCell>
+        <mxCell id="j6AXFMzYux9oAnsxbU0D-120" value="member" style="rounded=1;arcSize=9;fillColor=#F7F8F9;align=left;spacingLeft=5;strokeColor=#DEE1E6;html=1;strokeWidth=2;fontSize=12;fontColor=#0000CC;" vertex="1" parent="1">
+          <mxGeometry x="442" y="1410" width="238" height="33" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>

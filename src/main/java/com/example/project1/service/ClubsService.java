@@ -14,6 +14,11 @@ import java.util.List;
 public class ClubsService {
     @Autowired
     private ClubsDao clubsDao;
+
+    public List<Clubs> findAll() {
+        return clubsDao.findAll();
+    }
+
     @Transactional
     public int deleteClubsById(Long id) {
         return clubsDao.deleteClubsById(id);

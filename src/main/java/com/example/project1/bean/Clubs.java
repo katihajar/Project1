@@ -18,6 +18,7 @@ public class Clubs implements Serializable {
     private String categorie;
     @Temporal(TemporalType.DATE)
     private Date dateCreation ;
+    private String image;
 
     @ManyToOne
     private JuryDVE jury;
@@ -28,6 +29,13 @@ public class Clubs implements Serializable {
         return admin;
     }
 
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
+    }
 
     public void setAdmin(SuperAdminDVE admin) {
         this.admin = admin;

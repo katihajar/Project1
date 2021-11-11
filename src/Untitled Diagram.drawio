@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-11-11T15:34:21.581Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36 Edg/95.0.1020.44" etag="6QVwhaoEaL1Kf_On2Nvi" version="15.7.3" type="github">
+<mxfile host="app.diagrams.net" modified="2021-11-11T15:40:18.432Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36 Edg/95.0.1020.44" etag="GWuvOnjCMnunS1xsCOgL" version="15.7.3" type="github">
   <diagram name="Page-1" id="c9db0220-8083-56f3-ca83-edcdcd058819">
     <mxGraphModel dx="820" dy="482" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1.5" pageWidth="826" pageHeight="1169" background="#ffffff" math="0" shadow="0">
       <root>
@@ -74,6 +74,27 @@
         </mxCell>
         <mxCell id="j6AXFMzYux9oAnsxbU0D-31" value="feliere&lt;span style=&quot;color: rgb(255 , 0 , 0) ; font-size: 9.16667px&quot;&gt;*&lt;/span&gt;" style="fillColor=none;strokeColor=none;html=1;fontSize=11;fontStyle=0;align=left;fontColor=#596780;fontStyle=1;fontSize=11" vertex="1" parent="1">
           <mxGeometry x="280" y="300" width="240" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="j6AXFMzYux9oAnsxbU0D-34" value="" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn4.iconfinder.com/data/icons/6x16-free-application-icons/16/OK.png;fontSize=15;fontColor=#00FF00;" vertex="1" parent="1">
+          <mxGeometry x="520" y="524" width="36" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="j6AXFMzYux9oAnsxbU0D-35" value="&lt;b&gt;&lt;font color=&quot;#0000ff&quot;&gt;Les demandes d&#39;adition au club&lt;/font&gt;&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=15;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="270" y="450" width="250" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="j6AXFMzYux9oAnsxbU0D-36" value="" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn3.iconfinder.com/data/icons/musthave/128/Cancel.png;fontSize=15;fontColor=#0000FF;" vertex="1" parent="1">
+          <mxGeometry x="570" y="524" width="36" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="j6AXFMzYux9oAnsxbU0D-37" value="le nom+ le prenom" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=15;fontColor=#0000FF;" vertex="1" parent="1">
+          <mxGeometry x="280" y="524" width="130" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="j6AXFMzYux9oAnsxbU0D-38" value="" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn4.iconfinder.com/data/icons/6x16-free-application-icons/16/OK.png;fontSize=15;fontColor=#00FF00;" vertex="1" parent="1">
+          <mxGeometry x="524" y="564" width="36" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="j6AXFMzYux9oAnsxbU0D-39" value="" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn3.iconfinder.com/data/icons/musthave/128/Cancel.png;fontSize=15;fontColor=#0000FF;" vertex="1" parent="1">
+          <mxGeometry x="570" y="564" width="36" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="j6AXFMzYux9oAnsxbU0D-40" value="le nom+ le prenom" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=15;fontColor=#0000FF;" vertex="1" parent="1">
+          <mxGeometry x="280" y="564" width="130" height="36" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>

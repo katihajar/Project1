@@ -2,6 +2,7 @@ package com.example.project1.bean;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.List;
 
 @Entity
 public class Member  implements Serializable {
@@ -15,6 +16,16 @@ public class Member  implements Serializable {
     private String fillier;
     private String login;
     private String password;
+    @OneToMany(mappedBy = "member")
+    private List<ClubsMembers> clubsMembers ;
+
+    public List<ClubsMembers> getClubsMembers() {
+        return clubsMembers;
+    }
+
+    public void setClubsMembers(List<ClubsMembers> clubsMembers) {
+        this.clubsMembers = clubsMembers;
+    }
 
     public Long getId() {
         return id;

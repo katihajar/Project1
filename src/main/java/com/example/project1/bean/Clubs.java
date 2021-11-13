@@ -19,11 +19,21 @@ public class Clubs implements Serializable {
     @Temporal(TemporalType.DATE)
     private Date dateCreation ;
     private String image;
+    @OneToMany(mappedBy = "clubs")
+    private List<ClubsMembers> clubsMembers ;
 
     @ManyToOne
     private JuryDVE jury;
     @ManyToOne
     private SuperAdminDVE admin;
+
+    public List<ClubsMembers> getClubsMembers() {
+        return clubsMembers;
+    }
+
+    public void setClubsMembers(List<ClubsMembers> clubsMembers) {
+        this.clubsMembers = clubsMembers;
+    }
 
     public SuperAdminDVE getAdmin() {
         return admin;

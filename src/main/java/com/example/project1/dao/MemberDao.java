@@ -8,5 +8,6 @@ import java.util.List;
 public interface MemberDao extends JpaRepository<Member, Long> {
     Member findBynumeroEtudiant(String numeroEtudiant);
     Member findMemberById(Long id);
+    Member findMemberByLogin(String login);
     int deleteMemberById(Long id);
 }

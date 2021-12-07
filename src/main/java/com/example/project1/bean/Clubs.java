@@ -19,13 +19,22 @@ public class Clubs implements Serializable {
     @Temporal(TemporalType.DATE)
     private Date dateCreation ;
     private String image;
+    private String description;
+    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     @OneToMany(mappedBy = "clubs")
     private List<ClubsMembers> clubsMembers ;
-
     @ManyToOne
     private JuryDVE jury;
     @ManyToOne
     private SuperAdminDVE admin;
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
 
     public List<ClubsMembers> getClubsMembers() {
         return clubsMembers;

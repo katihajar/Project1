@@ -35,6 +35,11 @@ public class SuperAdminDVEAdminRest {
     public List<SuperAdminDVE> findAll() {
         return superAdminDVEService.findAll();
     }
+    @GetMapping("/login/{login}/password/{password}")
+    public Object findByCritere(@PathVariable String login,@PathVariable String password) {
+        return superAdminDVEService.findByCritere(login, password);
+    }
+
     @PostMapping("/")
     public int save(@RequestBody SuperAdminDVE superAdminDVE) {
         return superAdminDVEService.save(superAdminDVE);

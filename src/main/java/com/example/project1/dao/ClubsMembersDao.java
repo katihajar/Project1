@@ -9,5 +9,7 @@ public interface ClubsMembersDao extends JpaRepository<ClubsMembers, Long> {
     int deleteClubsActiviteById(Long id);
     List<ClubsMembers> findByClubsLibelle(String libelle);
     ClubsMembers findClubsMembersById(Long id);
+    List<ClubsMembers> findByMemberId(Long id);
     List<ClubsMembers> findByMemberNumeroEtudiant(String numeroEtudiant);
+
 }

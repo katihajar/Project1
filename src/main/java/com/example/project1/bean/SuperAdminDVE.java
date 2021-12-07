@@ -15,9 +15,18 @@ public class SuperAdminDVE  implements Serializable {
     private String prenom;
     private String login;
     private String password;
+    private String numero;
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     @OneToMany(mappedBy = "admin")
     private List<Clubs> clubs ;
+
+    public String getNumero() {
+        return numero;
+    }
+
+    public void setNumero(String numero) {
+        this.numero = numero;
+    }
 
     public Long getId() {
         return id;

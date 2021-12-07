@@ -7,12 +7,20 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import javax.persistence.EntityManager;
 import java.util.List;
 
 @Service
 public class JuryDVEService {
     @Autowired
     private JuryDVEDao juryDVEDao;
+    @Autowired
+    private EntityManager entityManager;
+
+    public Object findByCritere(String login, String password) {
+        String query = "SELECT a FROM JuryDVE a WHERE a.login= '" + login + "' and a.password='" + password + "'";
+        return entityManager.createQuery(query).getSingleResult();
+    }
     @Transactional
     public int deleteListJuryDVEById(List<JuryDVE> juryDVE) {
         int res=0;

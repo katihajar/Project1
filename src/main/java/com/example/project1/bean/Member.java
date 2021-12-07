@@ -1,11 +1,15 @@
 package com.example.project1.bean;
 
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.List;
 
 @Entity
 public class Member  implements Serializable {
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
@@ -16,6 +20,7 @@ public class Member  implements Serializable {
     private String fillier;
     private String login;
     private String password;
+    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     @OneToMany(mappedBy = "member")
     private List<ClubsMembers> clubsMembers ;
 

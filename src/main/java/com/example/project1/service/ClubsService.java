@@ -1,24 +1,32 @@
 package com.example.project1.service;
 
-import com.example.project1.bean.Activite;
 import com.example.project1.bean.Clubs;
-import com.example.project1.dao.ActiviteDao;
+import com.example.project1.bean.ClubsMembers;
 import com.example.project1.dao.ClubsDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import javax.persistence.EntityManager;
 import java.util.List;
 
 @Service
 public class ClubsService {
     @Autowired
     private ClubsDao clubsDao;
-
+    @Autowired
+    private EntityManager entityManager;
     public List<Clubs> findAll() {
         return clubsDao.findAll();
     }
+    public List<Clubs> findClubsByClubsMembersClubsNotIn(List<ClubsMembers> clubsMembers) {
+        return clubsDao.findClubsByClubsMembersClubsNotIn(clubsMembers);
+    }
 
+    public List<Clubs> findByCritere(String id) {
+        String query = "SELECT a FROM Clubs a WHERE a.id != '" + id + "'";
+        return entityManager.createQuery(query).getResultList();
+    }
     @Transactional
     public int deleteClubsById(Long id) {
         return clubsDao.deleteClubsById(id);

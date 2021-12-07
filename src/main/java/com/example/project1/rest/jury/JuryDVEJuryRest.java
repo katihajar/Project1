@@ -21,7 +21,10 @@ public class JuryDVEJuryRest {
     public JuryDVE findJuryDVEById(@PathVariable Long id) {
         return juryDVEService.findJuryDVEById(id);
     }
-
+    @GetMapping("/login/{login}/password/{password}")
+    public Object findByCritere(@PathVariable String login,@PathVariable String password) {
+        return juryDVEService.findByCritere(login, password);
+    }
     @DeleteMapping("/id/{id}")
     public int deleteJuryDVEById(@PathVariable Long id) {
         return juryDVEService.deleteJuryDVEById(id);

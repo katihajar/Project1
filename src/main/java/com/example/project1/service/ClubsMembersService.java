@@ -44,6 +44,10 @@ public class ClubsMembersService {
         return clubsMembersDao.findByMemberNumeroEtudiant(numeroEtudiant);
     }
 
+    public List<ClubsMembers> findByMemberId(Long id) {
+        return clubsMembersDao.findByMemberId(id);
+    }
+
     public List<ClubsMembers> findAll() {
         return clubsMembersDao.findAll();
     }
@@ -56,6 +60,7 @@ public class ClubsMembersService {
             return 1;
         }
     }
+
     public ClubsMembers update(ClubsMembers clubsMembers) {
         Member member= memberService.findMemberById(clubsMembers.getMember().getId());
         Clubs clubs= clubsService.findClubsById(clubsMembers.getClubs().getId());

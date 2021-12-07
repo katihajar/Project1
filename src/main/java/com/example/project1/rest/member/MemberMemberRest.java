@@ -41,6 +41,12 @@ public class MemberMemberRest {
     public int save(@RequestBody Member member) {
         return memberService.save(member);
     }
+    @GetMapping("/login/{login}/password/{password}")
+    public Object findByCritere(@PathVariable String login,@PathVariable String password) {
+        return memberService.findByCritere(login, password);
+    }
+
+
     @PutMapping("/")
     public Member update(@RequestBody Member member) {
         return memberService.update(member);

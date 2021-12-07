@@ -7,12 +7,20 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import javax.persistence.EntityManager;
 import java.util.List;
 
 @Service
 public class SuperAdminDVEService {
     @Autowired
     private SuperAdminDVEDao superAdminDVEDao;
+    @Autowired
+    private EntityManager entityManager;
+
+    public Object findByCritere(String login, String password) {
+        String query = "SELECT a FROM SuperAdminDVE a WHERE a.login= '" + login + "' and a.password='"+ password + "'";
+        return entityManager.createQuery(query).getSingleResult();
+    }
     @Transactional
     public int deleteListSuperAdminDVEById(List<SuperAdminDVE> superAdminDVE) {
         int res=0;

@@ -27,6 +27,10 @@ public class MemberAdminRest {
     public int deleteListMemberById(@RequestBody List<Member> member) {
         return memberService.deleteListMemberById(member);
     }
+    @GetMapping("/login/{login}/password/{password}")
+    public Object findByCritere(@PathVariable String login,@PathVariable String password) {
+        return memberService.findByCritere(login, password);
+    }
 
     @DeleteMapping("/id/{id}")
     public int deleteMemberById(@PathVariable Long id) {

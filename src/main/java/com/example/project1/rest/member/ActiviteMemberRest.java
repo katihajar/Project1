@@ -30,7 +30,7 @@ public class ActiviteMemberRest {
         return activiteService.findAll();
     }
     @GetMapping("/id/{id}")
-    public Activite findActiviteById(Long id) {
+    public Activite findActiviteById(@PathVariable Long id) {
         return activiteService.findActiviteById(id);
     }
 
@@ -38,12 +38,12 @@ public class ActiviteMemberRest {
     public int save(@RequestBody Activite activite) {
         return activiteService.save(activite);
     }
-    @GetMapping("/libelle/{libelle}")
+    @GetMapping("/clubs/libelle/{libelle}")
     public List<Activite> findByClubsLibelle(@PathVariable String libelle) {
         return activiteService.findByClubsLibelle(libelle);
     }
     @GetMapping("/categorie/{categorie}")
-    public List<Activite> findByClubsCategorie(String categorie) {
+    public List<Activite> findByClubsCategorie(@PathVariable String categorie) {
         return activiteService.findByClubsCategorie(categorie);
     }
     @PutMapping("/")

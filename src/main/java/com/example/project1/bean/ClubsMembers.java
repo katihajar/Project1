@@ -14,11 +14,20 @@ public class ClubsMembers {
     private Long id;
     @Temporal(TemporalType.DATE)
     private Date dateAdherence ;
-    private String Status ;
+    private String status ;
+    private Boolean etat ;
     @ManyToOne
     private Clubs clubs;
     @ManyToOne
     private Member member;
+
+    public Boolean getEtat() {
+        return etat;
+    }
+
+    public void setEtat(Boolean etat) {
+        this.etat = etat;
+    }
 
     public Date getDateAdherence() {
         return dateAdherence;
@@ -29,11 +38,11 @@ public class ClubsMembers {
     }
 
     public String getStatus() {
-        return Status;
+        return status;
     }
 
     public void setStatus(String status) {
-        Status = status;
+        this.status = status;
     }
 
     public Long getId() {

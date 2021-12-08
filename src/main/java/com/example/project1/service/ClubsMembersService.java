@@ -48,6 +48,10 @@ public class ClubsMembersService {
         return clubsMembersDao.findByMemberId(id);
     }
 
+    public List<ClubsMembers> findByMemberIdAndEtat(Long id, Boolean etat) {
+        return clubsMembersDao.findByMemberIdAndEtat(id, etat);
+    }
+
     public List<ClubsMembers> findAll() {
         return clubsMembersDao.findAll();
     }

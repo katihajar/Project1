@@ -59,11 +59,12 @@ public class ActiviteService {
 
     public Activite update(Activite activite) {
         Clubs clubs= clubsService.findClubsById(activite.getClubs().getId());
-        activite.setClubs(clubs);
-        activite.setNomActivite(activite.getNomActivite());
-        activite.setDescription(activite.getDescription());
-        activite.setBudget(activite.getBudget());
-        activite.setImage(activite.getImage());
-        return activiteDao.save(activite);
+        Activite acti= findActiviteById(activite.getId());
+        acti.setClubs(clubs);
+        acti.setNomActivite(activite.getNomActivite());
+        acti.setDescription(activite.getDescription());
+        acti.setBudget(activite.getBudget());
+        acti.setImage(activite.getImage());
+        return activiteDao.save(acti);
     }
 }

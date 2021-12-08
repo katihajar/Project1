@@ -16,6 +16,10 @@ public class ClubsMembersMembersRest {
     public List<ClubsMembers> findByMemberId(@PathVariable Long id) {
         return clubsMembersService.findByMemberId(id);
     }
+    @GetMapping("/member/id/{id}/etat/{etat}")
+    public List<ClubsMembers> findByMemberIdAndEtat(@PathVariable Long id,@PathVariable Boolean etat) {
+        return clubsMembersService.findByMemberIdAndEtat(id, etat);
+    }
 
     @GetMapping("/id/{id}")
     public ClubsMembers findClubsMembersById(@PathVariable Long id) {

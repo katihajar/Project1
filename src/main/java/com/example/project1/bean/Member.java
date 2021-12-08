@@ -20,6 +20,7 @@ public class Member  implements Serializable {
     private String fillier;
     private String login;
     private String password;
+    private String image;
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     @OneToMany(mappedBy = "member")
     private List<ClubsMembers> clubsMembers ;
@@ -27,7 +28,13 @@ public class Member  implements Serializable {
     public List<ClubsMembers> getClubsMembers() {
         return clubsMembers;
     }
+    public String getImage() {
+        return image;
+    }
 
+    public void setImage(String image) {
+        this.image = image;
+    }
     public void setClubsMembers(List<ClubsMembers> clubsMembers) {
         this.clubsMembers = clubsMembers;
     }

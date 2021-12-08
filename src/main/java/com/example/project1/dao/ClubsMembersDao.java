@@ -10,6 +10,7 @@ public interface ClubsMembersDao extends JpaRepository<ClubsMembers, Long> {
     List<ClubsMembers> findByClubsLibelle(String libelle);
     ClubsMembers findClubsMembersById(Long id);
     List<ClubsMembers> findByMemberId(Long id);
+    List<ClubsMembers> findByMemberIdAndEtat(Long id, Boolean etat);
     List<ClubsMembers> findByMemberNumeroEtudiant(String numeroEtudiant);
 
 }

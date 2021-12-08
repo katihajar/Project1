@@ -30,6 +30,14 @@ public class ClubsMembersMembersRest {
     public int deleteListClubsActiviteById(@RequestBody List<ClubsMembers> clubsMembers) {
         return clubsMembersService.deleteListClubsActiviteById(clubsMembers);
     }
+    @GetMapping("/etat/{etat}")
+    public List<ClubsMembers> findByEtat(@PathVariable Boolean etat) {
+        return clubsMembersService.findByEtat(etat);
+    }
+    @GetMapping("/libelle/{libelle}/etat/{etat}")
+    public List<ClubsMembers> findByClubsLibelleAndEtat(@PathVariable String libelle,@PathVariable Boolean etat) {
+        return clubsMembersService.findByClubsLibelleAndEtat(libelle, etat);
+    }
 
     @DeleteMapping("/id/{id}")
     public int deleteClubsActiviteById(@PathVariable Long id) {

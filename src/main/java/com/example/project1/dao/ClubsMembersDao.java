@@ -8,9 +8,11 @@ import java.util.List;
 public interface ClubsMembersDao extends JpaRepository<ClubsMembers, Long> {
     int deleteClubsActiviteById(Long id);
     List<ClubsMembers> findByClubsLibelle(String libelle);
+    List<ClubsMembers> findByClubsLibelleAndEtat(String libelle, Boolean etat);
     ClubsMembers findClubsMembersById(Long id);
     List<ClubsMembers> findByMemberId(Long id);
     List<ClubsMembers> findByMemberIdAndEtat(Long id, Boolean etat);
+    List<ClubsMembers> findByEtat( Boolean etat);
     List<ClubsMembers> findByMemberNumeroEtudiant(String numeroEtudiant);
 
 }

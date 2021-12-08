@@ -48,6 +48,14 @@ public class ClubsMembersService {
         return clubsMembersDao.findByMemberId(id);
     }
 
+    public List<ClubsMembers> findByClubsLibelleAndEtat(String libelle, Boolean etat) {
+        return clubsMembersDao.findByClubsLibelleAndEtat(libelle, etat);
+    }
+
+    public List<ClubsMembers> findByEtat(Boolean etat) {
+        return clubsMembersDao.findByEtat(etat);
+    }
+
     public List<ClubsMembers> findByMemberIdAndEtat(Long id, Boolean etat) {
         return clubsMembersDao.findByMemberIdAndEtat(id, etat);
     }
@@ -60,6 +68,7 @@ public class ClubsMembersService {
         if (findClubsMembersById(clubsMembers.getId())!= null){
             return -1;
         }else {
+            clubsMembers.setEtat(Boolean.FALSE);
             clubsMembersDao.save(clubsMembers);
             return 1;
         }
@@ -70,6 +79,7 @@ public class ClubsMembersService {
         Clubs clubs= clubsService.findClubsById(clubsMembers.getClubs().getId());
         clubsMembers.setMember(member);
         clubsMembers.setClubs(clubs);
+        clubsMembers.setEtat(clubsMembers.getEtat());
         clubsMembers.setStatus(clubsMembers.getStatus());
         return clubsMembersDao.save(clubsMembers);
     }

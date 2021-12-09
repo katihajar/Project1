@@ -6,6 +6,7 @@ import com.example.project1.service.ClubsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @RestController
@@ -14,8 +15,8 @@ public class ClubsMemberRest {
     @Autowired
     private ClubsService clubsService;
     @PostMapping("/clubs/")
-    public List<Clubs> findClubsByClubsMembersClubsNotIn(@RequestBody List<ClubsMembers> clubsMembers) {
-        return clubsService.findClubsByClubsMembersClubsNotIn(clubsMembers);
+    public List<Clubs> findClubsByIdNotIn(@RequestBody ArrayList<Long> ids) {
+        return clubsService.findClubsByIdNotIn(ids);
     }
 
     @GetMapping("/clubs/id/{id}")

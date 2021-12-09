@@ -1,13 +1,13 @@
 package com.example.project1.service;
 
 import com.example.project1.bean.Clubs;
-import com.example.project1.bean.ClubsMembers;
 import com.example.project1.dao.ClubsDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.persistence.EntityManager;
+import java.util.ArrayList;
 import java.util.List;
 
 @Service
@@ -19,10 +19,17 @@ public class ClubsService {
     public List<Clubs> findAll() {
         return clubsDao.findAll();
     }
-    public List<Clubs> findClubsByClubsMembersClubsNotIn(List<ClubsMembers> clubsMembers) {
-        return clubsDao.findClubsByClubsMembersClubsNotIn(clubsMembers);
+    public List<Clubs> findClubsByIdNotIn(ArrayList<Long>  ids) {
+        return clubsDao.findClubsByIdNotIn(ids);
     }
-
+    /*public List<Clubs> clubsNotIn(List<Long> ids) {
+        List<Clubs> club= new ArrayList<>();
+        for (int i = 0; i < ids.size(); i++) {
+            Clubs clubss = findClubsByIdNotIn(ids.get(i));
+            club.add(clubss);
+        }
+        return club;
+    }*/
     public List<Clubs> findByCritere(String id) {
         String query = "SELECT a FROM Clubs a WHERE a.id != '" + id + "'";
         return entityManager.createQuery(query).getResultList();

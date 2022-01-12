@@ -9,16 +9,24 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import javax.persistence.EntityManager;
+import java.util.ArrayList;
 import java.util.List;
 
 @Service
 public class ClubsMembersService {
+    @Autowired
+    private EntityManager entityManager;
     @Autowired
     private ClubsMembersDao clubsMembersDao;
     @Autowired
     private ClubsService clubsService;
     @Autowired
     private MemberService memberService;
+    @Transactional
+    public int deleteByClubsId(Long id) {
+        return clubsMembersDao.deleteByClubsId(id);
+    }
 
     public ClubsMembers findClubsMembersById(Long id) {
         return clubsMembersDao.findClubsMembersById(id);
@@ -40,6 +48,10 @@ public class ClubsMembersService {
         return clubsMembersDao.findByClubsLibelle(libelle);
     }
 
+    public ClubsMembers findByClubsIdAndStatus(Long id, String status) {
+        return clubsMembersDao.findByClubsIdAndStatus(id, status);
+    }
+
     public List<ClubsMembers> findByMemberNumeroEtudiant(String numeroEtudiant) {
         return clubsMembersDao.findByMemberNumeroEtudiant(numeroEtudiant);
     }
@@ -48,8 +60,12 @@ public class ClubsMembersService {
         return clubsMembersDao.findByMemberId(id);
     }
 
-    public List<ClubsMembers> findByClubsLibelleAndEtat(String libelle, Boolean etat) {
-        return clubsMembersDao.findByClubsLibelleAndEtat(libelle, etat);
+    public List<ClubsMembers> findByClubsLibelleAndEtatAndClubsStatus(String libelle, Boolean etat, String status) {
+        return clubsMembersDao.findByClubsLibelleAndEtatAndClubsStatus(libelle, etat, status);
+    }
+
+    public List<ClubsMembers> findByMemberIdAndEtatAndClubsStatus(Long id, Boolean etat, String status) {
+        return clubsMembersDao.findByMemberIdAndEtatAndClubsStatus(id, etat, status);
     }
 
     public List<ClubsMembers> findByEtat(Boolean etat) {
@@ -73,10 +89,28 @@ public class ClubsMembersService {
             return 1;
         }
     }
+    public List<Long> findByCritere(Long id) {
+        String query = "SELECT a.clubs.id FROM ClubsMembers a WHERE a.member.id ='"+ id + "'";
+        return entityManager.createQuery(query).getResultList();
+    }
+
+    public List<ClubsMembers> findClubsMembersByClubsIdNotInAndEtat(ArrayList<Long> ids, boolean etat) {
+        return clubsMembersDao.findClubsMembersByClubsIdNotInAndEtat(ids, etat);
+    }
 
     public ClubsMembers update(ClubsMembers clubsMembers) {
         Member member= memberService.findMemberById(clubsMembers.getMember().getId());
         Clubs clubs= clubsService.findClubsById(clubsMembers.getClubs().getId());
+        ClubsMembers clbM = findByClubsIdAndStatus(clubsMembers.getClubs().getId(),"Président");
+        if(clbM != null && clubsMembers.getStatus().equals("Président")){
+            clbM.setStatus("membre");
+            clubsMembersDao.save(clbM);
+        }
+        ClubsMembers clbM2 = findByClubsIdAndStatus(clubsMembers.getClubs().getId(),"Tresor");
+        if(clbM2 != null && clubsMembers.getStatus().equals("Tresor")){
+            clbM2.setStatus("membre");
+            clubsMembersDao.save(clbM2);
+        }
         clubsMembers.setMember(member);
         clubsMembers.setClubs(clubs);
         clubsMembers.setEtat(clubsMembers.getEtat());

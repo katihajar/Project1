@@ -5,6 +5,7 @@ import com.example.project1.service.ClubsMembersService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @RestController
@@ -20,6 +21,19 @@ public class ClubsMembersMembersRest {
     public List<ClubsMembers> findByMemberIdAndEtat(@PathVariable Long id,@PathVariable Boolean etat) {
         return clubsMembersService.findByMemberIdAndEtat(id, etat);
     }
+    @GetMapping("/clubs/id/{id}")
+    public List<Long> findByCritere(@PathVariable Long id) {
+        return clubsMembersService.findByCritere(id);
+    }
+    @PostMapping("/clubsM/{etat}")
+    public List<ClubsMembers> findClubsMembersByClubsIdNotIn(@RequestBody ArrayList<Long> ids, @PathVariable boolean etat) {
+        return clubsMembersService.findClubsMembersByClubsIdNotInAndEtat(ids, etat);
+    }
+
+    @GetMapping("/member/id/{id}/etat/{etat}/status/{status}")
+    public List<ClubsMembers> findByMemberIdAndEtatAndClubsStatus(@PathVariable Long id,@PathVariable Boolean etat,@PathVariable String status) {
+        return clubsMembersService.findByMemberIdAndEtatAndClubsStatus(id, etat, status);
+    }
 
     @GetMapping("/id/{id}")
     public ClubsMembers findClubsMembersById(@PathVariable Long id) {
@@ -34,9 +48,10 @@ public class ClubsMembersMembersRest {
     public List<ClubsMembers> findByEtat(@PathVariable Boolean etat) {
         return clubsMembersService.findByEtat(etat);
     }
-    @GetMapping("/libelle/{libelle}/etat/{etat}")
-    public List<ClubsMembers> findByClubsLibelleAndEtat(@PathVariable String libelle,@PathVariable Boolean etat) {
-        return clubsMembersService.findByClubsLibelleAndEtat(libelle, etat);
+
+    @GetMapping("/libelle/{libelle}/etat/{etat}/status/{status}")
+    public List<ClubsMembers> findByClubsLibelleAndEtatAndClubsStatus(@PathVariable String libelle,@PathVariable Boolean etat, @PathVariable String status) {
+        return clubsMembersService.findByClubsLibelleAndEtatAndClubsStatus(libelle, etat, status);
     }
 
     @DeleteMapping("/id/{id}")

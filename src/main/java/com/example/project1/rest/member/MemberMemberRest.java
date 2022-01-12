@@ -1,11 +1,22 @@
 package com.example.project1.rest.member;
 
 import com.example.project1.bean.Member;
+import com.example.project1.exception.NotAnImageFileException;
 import com.example.project1.service.MemberService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.List;
+
+import static com.example.project1.filter.JwtConstant.FORWARD_SLASH;
+import static com.example.project1.filter.JwtConstant.USER_FOLDER;
+import static org.springframework.http.HttpStatus.OK;
+import static org.springframework.http.MediaType.IMAGE_JPEG_VALUE;
 
 @RestController
 @RequestMapping("/member/member")
@@ -22,7 +33,17 @@ public class MemberMemberRest {
     public Member findBynumeroEtudiant(@PathVariable String numeroEtudiant) {
         return memberService.findBynumeroEtudiant(numeroEtudiant);
     }
+    @PostMapping("/updateProfileImage")
+    public ResponseEntity<Member> updateProfileImage(@RequestParam("username") String username, @RequestParam(value = "profileImage") MultipartFile profileImage)
+            throws IOException, NotAnImageFileException {
+        Member user = memberService.updateProfileImage(username, profileImage);
+        return new ResponseEntity<>(user, OK);
+    }
 
+    @GetMapping(path = "/image/{username}/{fileName}", produces = IMAGE_JPEG_VALUE)
+    public byte[] getProfileImage(@PathVariable("username") String username, @PathVariable("fileName") String fileName) throws IOException {
+        return Files.readAllBytes(Paths.get(USER_FOLDER + username + FORWARD_SLASH + fileName));
+    }
     @DeleteMapping("/delete-Multiple")
     public int deleteListMemberById(@RequestBody List<Member> member) {
         return memberService.deleteListMemberById(member);

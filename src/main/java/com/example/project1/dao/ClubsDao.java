@@ -10,6 +10,7 @@ import java.util.List;
 public interface ClubsDao extends JpaRepository<Clubs, Long> {
     int deleteClubsById(Long id);
     Clubs findByLibelle(String libelle);
+    List<Clubs> findByStatus(String status);
     Clubs findClubsById(Long id);
     List<Clubs> findByCategorie(String categorie);
     List<Clubs> findByReferentPedagogique(String referentPedagogique);

@@ -11,5 +11,5 @@ public interface ActiviteDao  extends JpaRepository<Activite, Long> {
     List<Activite> findByClubsCategorie(String categorie);
     Activite findActiviteById(Long id);
     int deleteActiviteById(Long id);
-
+    int deleteByClubsId(Long id);
 }

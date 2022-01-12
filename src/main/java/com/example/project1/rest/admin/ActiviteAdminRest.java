@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 
+import java.io.IOException;
 import java.util.List;
 
 @RestController
@@ -37,7 +38,7 @@ public class ActiviteAdminRest {
     }
 
     @PostMapping("/")
-    public int save(@RequestBody Activite activite) {
+    public int save(@RequestBody Activite activite) throws IOException {
         return activiteService.save(activite);
     }
     @GetMapping("/libelle/{libelle}")

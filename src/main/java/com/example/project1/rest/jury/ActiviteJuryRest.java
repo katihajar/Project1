@@ -5,6 +5,7 @@ import com.example.project1.service.ActiviteService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.io.IOException;
 import java.util.List;
 
 @RestController
@@ -30,20 +31,25 @@ public class ActiviteJuryRest {
         return activiteService.findAll();
     }
     @GetMapping("/id/{id}")
-    public Activite findActiviteById(Long id) {
+    public Activite findActiviteById(@PathVariable Long id) {
         return activiteService.findActiviteById(id);
     }
 
     @PostMapping("/")
-    public int save(@RequestBody Activite activite) {
+    public int save(@RequestBody Activite activite) throws IOException {
         return activiteService.save(activite);
     }
-    @GetMapping("/libelle/{libelle}")
+    @GetMapping("/clubs/libelle/{libelle}")
     public List<Activite> findByClubsLibelle(@PathVariable String libelle) {
         return activiteService.findByClubsLibelle(libelle);
     }
+    @GetMapping("/activite/libelle/{libelle}")
+    public List<Activite> findByCritere(@PathVariable String libelle) {
+        return activiteService.findByCritere(libelle);
+    }
+
     @GetMapping("/categorie/{categorie}")
-    public List<Activite> findByClubsCategorie(String categorie) {
+    public List<Activite> findByClubsCategorie(@PathVariable String categorie) {
         return activiteService.findByClubsCategorie(categorie);
     }
     @PutMapping("/")

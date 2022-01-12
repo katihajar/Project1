@@ -12,6 +12,19 @@ import java.util.List;
 public class ClubsMembersJuryRest {
     @Autowired
     private ClubsMembersService clubsMembersService;
+    @GetMapping("/member/id/{id}")
+    public List<ClubsMembers> findByMemberId(@PathVariable Long id) {
+        return clubsMembersService.findByMemberId(id);
+    }
+    @GetMapping("/member/id/{id}/etat/{etat}")
+    public List<ClubsMembers> findByMemberIdAndEtat(@PathVariable Long id,@PathVariable Boolean etat) {
+        return clubsMembersService.findByMemberIdAndEtat(id, etat);
+    }
+
+    @GetMapping("/member/id/{id}/etat/{etat}/status/{status}")
+    public List<ClubsMembers> findByMemberIdAndEtatAndClubsStatus(@PathVariable Long id,@PathVariable Boolean etat,@PathVariable String status) {
+        return clubsMembersService.findByMemberIdAndEtatAndClubsStatus(id, etat, status);
+    }
 
     @GetMapping("/id/{id}")
     public ClubsMembers findClubsMembersById(@PathVariable Long id) {
@@ -21,6 +34,15 @@ public class ClubsMembersJuryRest {
     @DeleteMapping("/delete-Multi")
     public int deleteListClubsActiviteById(@RequestBody List<ClubsMembers> clubsMembers) {
         return clubsMembersService.deleteListClubsActiviteById(clubsMembers);
+    }
+    @GetMapping("/etat/{etat}")
+    public List<ClubsMembers> findByEtat(@PathVariable Boolean etat) {
+        return clubsMembersService.findByEtat(etat);
+    }
+
+    @GetMapping("/libelle/{libelle}/etat/{etat}/status/{status}")
+    public List<ClubsMembers> findByClubsLibelleAndEtatAndClubsStatus(@PathVariable String libelle,@PathVariable Boolean etat, @PathVariable String status) {
+        return clubsMembersService.findByClubsLibelleAndEtatAndClubsStatus(libelle, etat, status);
     }
 
     @DeleteMapping("/id/{id}")

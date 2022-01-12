@@ -19,7 +19,10 @@ public class ClubsMembersSharedRest {
     public ClubsMembers findClubsMembersById(@PathVariable Long id) {
         return clubsMembersService.findClubsMembersById(id);
     }
-
+    @GetMapping("/libelle/{libelle}/etat/{etat}/status/{status}")
+    public List<ClubsMembers> findByClubsLibelleAndEtat(@PathVariable String libelle,@PathVariable Boolean etat, @PathVariable String status) {
+        return clubsMembersService.findByClubsLibelleAndEtatAndClubsStatus(libelle, etat, status);
+    }
     @DeleteMapping("/delete-Multi")
     public int deleteListClubsActiviteById(@RequestBody List<ClubsMembers> clubsMembers) {
         return clubsMembersService.deleteListClubsActiviteById(clubsMembers);

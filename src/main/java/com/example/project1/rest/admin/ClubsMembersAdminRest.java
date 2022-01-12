@@ -23,7 +23,10 @@ public class ClubsMembersAdminRest {
     public int deleteListClubsActiviteById(@RequestBody List<ClubsMembers> clubsMembers) {
         return clubsMembersService.deleteListClubsActiviteById(clubsMembers);
     }
-
+    @GetMapping("/libelle/{libelle}/etat/{etat}/status/{status}")
+    public List<ClubsMembers> findByClubsLibelleAndEtat(@PathVariable String libelle,@PathVariable Boolean etat, @PathVariable String status) {
+        return clubsMembersService.findByClubsLibelleAndEtatAndClubsStatus(libelle, etat, status);
+    }
     @DeleteMapping("/id/{id}")
     public int deleteClubsActiviteById(@PathVariable Long id) {
         return clubsMembersService.deleteClubsActiviteById(id);

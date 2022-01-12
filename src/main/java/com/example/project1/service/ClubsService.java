@@ -1,6 +1,7 @@
 package com.example.project1.service;
 
 import com.example.project1.bean.Clubs;
+import com.example.project1.dao.ActiviteDao;
 import com.example.project1.dao.ClubsDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -16,6 +17,13 @@ public class ClubsService {
     private ClubsDao clubsDao;
     @Autowired
     private EntityManager entityManager;
+    @Autowired
+    private ActiviteService activiteService;
+    @Autowired
+    private ClubsMembersService clubsMembersService;
+    @Autowired
+    private DemandeCreationClbService demandeCreationClbService;
+
     public List<Clubs> findAll() {
         return clubsDao.findAll();
     }
@@ -36,7 +44,10 @@ public class ClubsService {
     }
     @Transactional
     public int deleteClubsById(Long id) {
-        return clubsDao.deleteClubsById(id);
+        int res= clubsDao.deleteClubsById(id);
+        int res1= clubsMembersService.deleteByClubsId(id);
+        int res2= activiteService.deleteByClubsId(id);
+        return res+res1+res2;
     }
     @Transactional
     public int deleteListClubsById(List<Clubs> clubs) {
@@ -46,6 +57,11 @@ public class ClubsService {
         }
         return res;
     }
+
+    public List<Clubs> findByStatus(String status) {
+        return clubsDao.findByStatus(status);
+    }
+
     public Clubs findClubsById(Long id) {
         return clubsDao.findClubsById(id);
     }
@@ -62,9 +78,12 @@ public class ClubsService {
         return clubsDao.findByReferentPedagogique(referentPedagogique);
     }
     public int save(Clubs clubs) {
-        if (findClubsById(clubs.getId())!= null){
+        if (findClubsById(clubs.getId())!= null && findByLibelle(clubs.getLibelle())!=null){
             return -1;
         }else{
+            if (demandeCreationClbService.findByLibelle(clubs.getLibelle())!=null){
+                demandeCreationClbService.deleteByLibelle(clubs.getLibelle());
+            }
             clubsDao.save(clubs);
             return 1;
         }

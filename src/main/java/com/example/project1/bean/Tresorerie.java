@@ -11,10 +11,19 @@ public class Tresorerie  implements Serializable {
     private Long id;
     private Boolean inn;
     private BigDecimal amount;
+    private BigDecimal amountBudget;
     @Temporal(TemporalType.DATE)
     private Date dateTresorerie ;
     @OneToOne
     private Activite activite;
+
+    public BigDecimal getAmountBudget() {
+        return amountBudget;
+    }
+
+    public void setAmountBudget(BigDecimal amountBudget) {
+        this.amountBudget = amountBudget;
+    }
 
     public Long getId() {
         return id;

@@ -2,11 +2,13 @@ package com.example.project1.service;
 
 import com.example.project1.bean.Activite;
 import com.example.project1.bean.Tresorerie;
+import com.example.project1.dao.ActiviteDao;
 import com.example.project1.dao.TresorerieDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import javax.persistence.EntityManager;
 import java.util.List;
 
 @Service
@@ -15,16 +17,33 @@ public class TresorerieService {
     private TresorerieDao tresorerieDao;
     @Autowired
     private ActiviteService activiteService;
+    @Autowired
+    private EntityManager entityManager;
+    @Autowired
+    private ActiviteDao activiteDao;
+
+    public Tresorerie findTopByOrderByDateTresorerieDesc() {
+        return tresorerieDao.findTopByOrderByDateTresorerieDesc();
+    }
+
 
     public Tresorerie findTresorerieById(Long id) {
         return tresorerieDao.findTresorerieById(id);
     }
 
-    public Tresorerie findByActiviteNomActivite(String nomActivite) {
+    public List<Tresorerie> findByActiviteNomActivite(String nomActivite) {
         return tresorerieDao.findByActiviteNomActivite(nomActivite);
     }
 
-    public Tresorerie findByActiviteId(Long id) {
+    public Tresorerie findTopByActiviteIdOrderByDateTresorerieDesc(Long id) {
+        return tresorerieDao.findTopByActiviteIdOrderByDateTresorerieDesc(id);
+    }
+    public List<Tresorerie> findByCritere(Long id)
+    {
+        String query = "SELECT n From Tresorerie n where n.activite.id = '"+id+"'ORDER BY n.dateTresorerie DESC";
+        return entityManager.createQuery(query).getResultList();
+    }
+    public List<Tresorerie> findByActiviteId(Long id) {
         return tresorerieDao.findByActiviteId(id);
     }
 
@@ -46,9 +65,15 @@ public class TresorerieService {
     }
 
     public int save(Tresorerie tresorerie) {
+        Tresorerie tres= findTopByActiviteIdOrderByDateTresorerieDesc(tresorerie.getActivite().getId());
         if (findTresorerieById(tresorerie.getId())!= null){
             return -1;
         }else {
+            if (tres == null){
+                tresorerie.setAmountBudget(tresorerie.getActivite().getBudget().add(tresorerie.getAmount()));
+            }else {
+                tresorerie.setAmountBudget(tres.getAmountBudget().add(tresorerie.getAmount()));
+            }
             tresorerieDao.save(tresorerie);
             return 1;
         }

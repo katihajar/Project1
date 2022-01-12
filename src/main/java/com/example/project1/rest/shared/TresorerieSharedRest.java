@@ -18,11 +18,11 @@ public class TresorerieSharedRest {
         return tresorerieService.findTresorerieById(id);
     }
     @GetMapping("/nomActivite/{nomActivite}")
-    public Tresorerie findByActiviteNomActivite(@PathVariable String nomActivite) {
+    public List<Tresorerie> findByActiviteNomActivite(@PathVariable String nomActivite) {
         return tresorerieService.findByActiviteNomActivite(nomActivite);
     }
     @GetMapping("/activite/id/{id}")
-    public Tresorerie findByActiviteId(@PathVariable Long id) {
+    public List<Tresorerie> findByActiviteId(@PathVariable Long id) {
         return tresorerieService.findByActiviteId(id);
     }
 

@@ -2,7 +2,6 @@ package com.example.project1.service;
 
 import com.example.project1.bean.*;
 import com.example.project1.dao.ActiviteDao;
-import com.example.project1.rest.member.ImageRest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -17,8 +16,6 @@ public class ActiviteService {
     private ActiviteDao activiteDao;
     @Autowired
     private ClubsService clubsService;
-    @Autowired
-    private ImageRest image;
     @Autowired
     private EntityManager entityManager;
 

@@ -2,9 +2,7 @@ package com.example.project1.rest.admin;
 
 import com.example.project1.bean.Activite;
 import com.example.project1.service.ActiviteService;
-import com.example.project1.service.EtudiantService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 
 import java.io.IOException;

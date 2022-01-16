@@ -90,9 +90,11 @@ public class ClubsService {
     }
     public Clubs update(Clubs clubs) {
         clubs.setStatus(clubs.getStatus());
-        clubs.setCategorie(clubs.getStatus());
+        clubs.setCategorie(clubs.getCategorie());
         clubs.setLibelle(clubs.getLibelle());
         clubs.setReferentPedagogique(clubs.getReferentPedagogique());
+        clubs.setDescription(clubs.getDescription());
+        clubs.setImage(clubs.getImage());
         return clubsDao.save(clubs);
     }
 }

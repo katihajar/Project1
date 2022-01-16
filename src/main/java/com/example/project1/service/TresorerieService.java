@@ -81,7 +81,6 @@ public class TresorerieService {
     public Tresorerie update(Tresorerie tresorerie) {
         Activite activite = activiteService.findActiviteById(tresorerie.getActivite().getId());
         tresorerie.setActivite(activite);
-        tresorerie.setInn(tresorerie.getInn());
         return tresorerieDao.save(tresorerie);
     }
 }

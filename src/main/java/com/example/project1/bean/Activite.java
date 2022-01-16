@@ -12,7 +12,6 @@ public class Activite  implements Serializable {
     private String nomActivite;
     private String description;
     private String image;
-    private String imageName;
     private BigDecimal budget;
     @Temporal(TemporalType.DATE)
     private Date dateDebut ;
@@ -30,13 +29,6 @@ public class Activite  implements Serializable {
         this.budget = budget;
     }
 
-    public String getImageName() {
-        return imageName;
-    }
-
-    public void setImageName(String imageName) {
-        this.imageName = imageName;
-    }
 
     public Long getId() {
         return id;

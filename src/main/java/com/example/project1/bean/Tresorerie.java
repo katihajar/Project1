@@ -9,7 +9,6 @@ public class Tresorerie  implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    private Boolean inn;
     private BigDecimal amount;
     private BigDecimal amountBudget;
     @Temporal(TemporalType.DATE)
@@ -31,14 +30,6 @@ public class Tresorerie  implements Serializable {
 
     public void setId(Long id) {
         this.id = id;
-    }
-
-    public Boolean getInn() {
-        return inn;
-    }
-
-    public void setInn(Boolean inn) {
-        this.inn = inn;
     }
 
     public BigDecimal getAmount() {

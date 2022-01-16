@@ -1,6 +1,5 @@
 package com.example.project1.service;
 
-import com.example.project1.bean.Etudiant;
 import com.example.project1.bean.JuryDVE;
 import com.example.project1.dao.JuryDVEDao;
 import org.springframework.beans.factory.annotation.Autowired;

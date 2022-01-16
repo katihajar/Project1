@@ -103,13 +103,23 @@ public class ClubsMembersService {
         Clubs clubs= clubsService.findClubsById(clubsMembers.getClubs().getId());
         ClubsMembers clbM = findByClubsIdAndStatus(clubsMembers.getClubs().getId(),"Président");
         if(clbM != null && clubsMembers.getStatus().equals("Président")){
-            clbM.setStatus("membre");
+            clbM.setStatus("Membre");
             clubsMembersDao.save(clbM);
         }
         ClubsMembers clbM2 = findByClubsIdAndStatus(clubsMembers.getClubs().getId(),"Tresor");
         if(clbM2 != null && clubsMembers.getStatus().equals("Tresor")){
-            clbM2.setStatus("membre");
+            clbM2.setStatus("Membre");
             clubsMembersDao.save(clbM2);
+        }
+        ClubsMembers clbM3 = findByClubsIdAndStatus(clubsMembers.getClubs().getId(),"Vice-President");
+        if(clbM3 != null && clubsMembers.getStatus().equals("Vice-President")){
+            clbM3.setStatus("Membre");
+            clubsMembersDao.save(clbM3);
+        }
+        ClubsMembers clbM4 = findByClubsIdAndStatus(clubsMembers.getClubs().getId(),"Secretaire");
+        if(clbM4 != null && clubsMembers.getStatus().equals("Secretaire")){
+            clbM4.setStatus("Membre");
+            clubsMembersDao.save(clbM4);
         }
         clubsMembers.setMember(member);
         clubsMembers.setClubs(clubs);

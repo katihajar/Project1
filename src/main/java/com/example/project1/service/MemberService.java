@@ -1,6 +1,5 @@
 package com.example.project1.service;
 
-import com.example.project1.bean.Clubs;
 import com.example.project1.bean.Member;
 import com.example.project1.dao.MemberDao;
 import com.example.project1.exception.NotAnImageFileException;
@@ -136,9 +135,9 @@ public class MemberService {
            char[] possibleCharacters = (new String("ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789~&*")).toCharArray();
            String pass = RandomStringUtils.random( 10, 0, possibleCharacters.length-1, false, false, possibleCharacters, new SecureRandom() );
            member.setPassword(pass);
-           memberDao.save(member);
            prepareMessage(member);
-           return 1;
+           memberDao.save(member);
+            return 1;
        }
     }
     public Member update(Member member) {

@@ -13,10 +13,13 @@ import java.util.List;
 public class ClubsJuryRest {
     @Autowired
     private ClubsService clubsService;
-    @PostMapping("/clubs/")
-    public List<Clubs> findClubsByIdNotIn(@RequestBody ArrayList<Long> ids) {
-        return clubsService.findClubsByIdNotIn(ids);
+    @PostMapping("/clubs/status/{status}")
+    public List<Clubs> findClubsByIdNotInAndStatus(@RequestBody ArrayList<Long> ids,@PathVariable String status) {
+        return clubsService.findClubsByIdNotInAndStatus(ids, status);
     }
+
+
+
     @GetMapping("/status/{status}")
     public List<Clubs> findByStatus(@PathVariable String status) {
         return clubsService.findByStatus(status);

@@ -27,17 +27,11 @@ public class ClubsService {
     public List<Clubs> findAll() {
         return clubsDao.findAll();
     }
-    public List<Clubs> findClubsByIdNotIn(ArrayList<Long>  ids) {
-        return clubsDao.findClubsByIdNotIn(ids);
+
+    public List<Clubs> findClubsByIdNotInAndStatus(ArrayList<Long> ids, String status) {
+        return clubsDao.findClubsByIdNotInAndStatus(ids, status);
     }
-    /*public List<Clubs> clubsNotIn(List<Long> ids) {
-        List<Clubs> club= new ArrayList<>();
-        for (int i = 0; i < ids.size(); i++) {
-            Clubs clubss = findClubsByIdNotIn(ids.get(i));
-            club.add(clubss);
-        }
-        return club;
-    }*/
+
     public List<Clubs> findByCritere(String id) {
         String query = "SELECT a FROM Clubs a WHERE a.id != '" + id + "'";
         return entityManager.createQuery(query).getResultList();

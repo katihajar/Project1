@@ -14,10 +14,11 @@ import java.util.List;
 public class ClubsMemberRest {
     @Autowired
     private ClubsService clubsService;
-    @PostMapping("/clubs/")
-    public List<Clubs> findClubsByIdNotIn(@RequestBody ArrayList<Long> ids) {
-        return clubsService.findClubsByIdNotIn(ids);
+    @PostMapping("/clubs/status/{status}")
+    public List<Clubs> findClubsByIdNotInAndStatus(@RequestBody ArrayList<Long> ids,@PathVariable String status) {
+        return clubsService.findClubsByIdNotInAndStatus(ids, status);
     }
+
 
     @GetMapping("/clubs/id/{id}")
     public List<Clubs> findByCritere(@PathVariable String id) {

@@ -14,5 +14,5 @@ public interface ClubsDao extends JpaRepository<Clubs, Long> {
     Clubs findClubsById(Long id);
     List<Clubs> findByCategorie(String categorie);
     List<Clubs> findByReferentPedagogique(String referentPedagogique);
-    List<Clubs> findClubsByIdNotIn(ArrayList<Long> ids);
+    List<Clubs> findClubsByIdNotInAndStatus(ArrayList<Long> ids, String status);
 }

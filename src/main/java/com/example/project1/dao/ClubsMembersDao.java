@@ -12,6 +12,7 @@ public interface ClubsMembersDao extends JpaRepository<ClubsMembers, Long> {
     int deleteByClubsId(Long id);
     List<ClubsMembers> findByClubsLibelle(String libelle);
     ClubsMembers findByClubsIdAndStatus(Long id,String status);
+    ClubsMembers findByClubsIdAndMemberId(Long id,Long ids);
     List<ClubsMembers> findByClubsLibelleAndEtatAndClubsStatus(String libelle, Boolean etat, String status);
     ClubsMembers findClubsMembersById(Long id);
     List<ClubsMembers> findByMemberId(Long id);

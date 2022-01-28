@@ -13,7 +13,10 @@ import java.util.List;
 public class ClubsMembersAdminRest {
     @Autowired
     private ClubsMembersService clubsMembersService;
-
+    @GetMapping("/clubsmembers/id/{id}/ids/{ids}")
+    public ClubsMembers findByClubsIdAndMemberId(@PathVariable Long id,@PathVariable Long ids) {
+        return clubsMembersService.findByClubsIdAndMemberId(id, ids);
+    }
     @GetMapping("/id/{id}")
     public ClubsMembers findClubsMembersById(@PathVariable Long id) {
         return clubsMembersService.findClubsMembersById(id);

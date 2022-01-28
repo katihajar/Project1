@@ -98,6 +98,10 @@ public class ClubsMembersService {
         return clubsMembersDao.findClubsMembersByClubsIdNotInAndEtat(ids, etat);
     }
 
+    public ClubsMembers findByClubsIdAndMemberId(Long id, Long ids) {
+        return clubsMembersDao.findByClubsIdAndMemberId(id, ids);
+    }
+
     public ClubsMembers update(ClubsMembers clubsMembers) {
         Member member= memberService.findMemberById(clubsMembers.getMember().getId());
         Clubs clubs= clubsService.findClubsById(clubsMembers.getClubs().getId());
